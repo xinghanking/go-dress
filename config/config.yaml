@@ -1,0 +1,46 @@
+# config.yaml  
+server:
+  host: 127.0.0.1
+  port: 6443
+  ssl: false
+  pid_file: /home/go/src/han-dress/run/han-dress.pid
+  image_dir: /home/web/data/image/
+  selfie_root: /home/web/data/selfie/
+  video_dir: /home/web/data/video/
+# 数据库设置  
+database:
+  driver: mysql
+  host: 127.0.0.1
+  port: 3306
+  user: dreambase
+  password: dreambaseuser
+  dbname: dreambase
+  charset: utf8mb4
+
+# API设置  
+api:
+  host: 127.0.0.1
+  port: 8080
+  enable_https: false
+
+# redis设置
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password:
+  db: 0
+  expiration: 864000
+
+# session设置
+session:
+  name: GO_SESSION_ID
+  gc_maxlifetime: 2592000
+  php_name: PHPSESSID
+  redis_key_prefix: "PHPREDIS_SESSION:"
+
+cookie:
+  max_age: 86400
+  path: /
+  domain:
+  secure: false
+  http_only: false
